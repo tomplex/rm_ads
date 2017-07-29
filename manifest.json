@@ -1,0 +1,21 @@
+{
+	"manifest_version" 	: 2,
+
+	"name"			: "rm -f ads",
+	"description"		: "Remove ads from google search",
+	"version"		: "1.0",
+
+	"content_scripts" : [
+	  {
+		"matches"	: ["http://www.google.com/*", "https://www.google.com/*"],
+		"js"		: ["adrm.js"]
+	  }	
+	],
+
+	"permissions"		: [
+		"tabs", "http://www.google.com/*",
+		"tabs", "https://www.google.com/*"
+	]
+
+
+}
